@@ -1,0 +1,18 @@
+{
+  "type": "record",
+  "name": "TripEvent",
+  "namespace": "io.github.sahilpatkar.ffp.avro",
+  "doc": "One completed taxi trip. Event time is dropoff_ts_ms: a trip only becomes observable when it ends.",
+  "fields": [
+    {"name": "trip_id", "type": "string", "doc": "Deterministic hash of the source row, stable across replays."},
+    {"name": "vendor_id", "type": "int"},
+    {"name": "pickup_ts_ms", "type": "long", "doc": "Pickup time, epoch millis UTC."},
+    {"name": "dropoff_ts_ms", "type": "long", "doc": "Dropoff time, epoch millis UTC. This is the event time."},
+    {"name": "pickup_zone_id", "type": "int", "doc": "TLC taxi zone (PULocationID)."},
+    {"name": "dropoff_zone_id", "type": "int", "doc": "TLC taxi zone (DOLocationID)."},
+    {"name": "passenger_count", "type": ["null", "int"], "default": null},
+    {"name": "trip_distance_miles", "type": "double"},
+    {"name": "fare_amount", "type": "double"},
+    {"name": "total_amount", "type": "double"}
+  ]
+}

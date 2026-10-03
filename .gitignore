@@ -1,0 +1,16 @@
+# build output
+flink-jobs/target/
+flink-jobs/dependency-reduced-pom.xml
+# data is downloaded, never committed
+data/*
+!data/.gitkeep
+# python
+__pycache__/
+*.egg-info/
+.pytest_cache/
+.venv/
+# editors
+.idea/
+*.iml
+.vscode/
+.DS_Store
