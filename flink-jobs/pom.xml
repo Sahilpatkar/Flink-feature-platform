@@ -167,7 +167,7 @@
               <transformers>
                 <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                  <mainClass>io.github.sahilpatkar.ffp.TripCountJob</mainClass>
+                  <mainClass>io.github.sahilpatkar.ffp.FeatureJob</mainClass>
                 </transformer>
               </transformers>
             </configuration>
